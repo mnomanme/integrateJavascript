@@ -10,18 +10,19 @@
 		<main>
 			<section>
 				<h2>Exploring DOM</h2>
-				<p>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Neque, facere.
-				</p>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+				<p id="first">My first paragraph</p>
+				<p>This is my second paragraph</p>
 			</section>
 		</main>
 	</body>
 	<!-- script js -->
 	<script>
-		var user = { name: 'BUBT', dept: 'CSE', members: 10080 };
-		// DOM => Document Object Module
-		console.log(document.body);
+		var first = document.getElementById('first');
+		first.style.color = 'green';
+		first.style.backgroundColor = 'yellow';
+		first.style.fontSize = '45px';
+		// var user = { name: 'BUBT', dept: 'CSE', members: 10080 };
+		// // DOM => Document Object Module
+		// console.log(document.body);
 	</script>
 </html>
