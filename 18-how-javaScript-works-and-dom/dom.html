@@ -5,6 +5,14 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Explore DOM</title>
+		<style>
+			article {
+				border: 5px solid forestgreen;
+				border-radius: 10px;
+				margin: 10px;
+				padding: 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<main>
@@ -13,10 +21,56 @@
 				<p id="first">My first paragraph</p>
 				<p>This is my second paragraph</p>
 			</section>
+			<section>
+				<h2>Exploring DOM 2</h2>
+				<article>
+					<h3>artile-1</h3>
+					<p class="author">author-1</p>
+					<p class="description">
+						Lorem ipsum dolor, sit amet consectetur adipisicing
+						elit. Magnam recusandae qui, itaque, fugiat iste
+						aspernatur possimus, quasi minima esse nobis provident
+						numquam sit eos blanditiis natus vel optio deleniti
+						nemo!
+					</p>
+				</article>
+				<article>
+					<h3>artile-2</h3>
+					<p class="author">author-2</p>
+					<p class="description">
+						Nulla expedita fugit eum atque! At recusandae quisquam
+						quae minus odio nesciunt fugit maxime ipsum quaerat nisi
+						quod nemo, corporis consectetur sapiente rem eaque
+						deserunt aliquam fugiat quasi quos. Cupiditate.
+					</p>
+				</article>
+				<article>
+					<h3>artile-3</h3>
+					<p class="author">author-3</p>
+					<p class="description">
+						Tempore, maxime dolor aperiam et nemo nobis? Animi,
+						perspiciatis. Quisquam maxime quas alias architecto
+						necessitatibus quaerat at quasi, qui placeat modi,
+						dolorem voluptatum voluptatem magnam sequi soluta
+						sapiente ipsam facere.
+					</p>
+				</article>
+			</section>
 		</main>
 	</body>
 	<!-- script js -->
 	<script>
+		var authors = document.getElementsByClassName('author');
+		// console.log(authors);
+		for (i = 0; i < authors.length; i++) {
+			var elements = authors[i];
+			// console.log(elements);
+			// console.log(elements.innerHTML);
+			elements.innerHTML = 'Lekhok - ' + (i + 1);
+			elements.style.backgroundColor = 'lightgrey';
+			elements.style.margin = '10px';
+		}
+
 		var first = document.getElementById('first');
 		first.style.color = 'green';
 		first.style.backgroundColor = 'yellow';
