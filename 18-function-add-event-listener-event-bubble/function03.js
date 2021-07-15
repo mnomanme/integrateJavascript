@@ -2,6 +2,7 @@
 
 // step three
 
+// length check
 function evenifyAll(nums) {
 	for (let i = 0; i < nums.length; i++) {
 		const num = nums[i];
@@ -9,6 +10,7 @@ function evenifyAll(nums) {
 	}
 }
 
+// condition check
 function evenify(number) {
 	if (number % 2 == 0) {
 		console.log(number, ': is even number');
@@ -18,4 +20,7 @@ function evenify(number) {
 }
 
 numbers = [10, 1, 2, 3, 4, 5, 6];
-evenifyAll(numbers);
+evenifyAll(numbers); // call by function
+
+friendsAge = [32, 21, 40, 19];
+evenifyAll(friendsAge); // call by function

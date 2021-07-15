@@ -5,14 +5,15 @@
 // find numbers even and odd
 
 nums = [5, 3, 8, 12, 79, 4, 88, 9];
+Number;
 
 for (let i = 0; i < nums.length; i++) {
 	const num = nums[i];
 	// console.log(num * 2);
 	if (num % 2 == 0) {
-		console.log(num, ': is even number');
+		console.log(num, ': Number is even number');
 	} else {
-		console.log(num, ': is odd number');
+		console.log(num, ': Number is odd number');
 	}
 }
 
@@ -24,8 +25,8 @@ for (let i = 0; i < friendsAge.length; i++) {
 	const age = friendsAge[i];
 	// console.log(age);
 	if (age % 2 == 0) {
-		console.log(age, ': age is even number');
+		console.log(age, ': Age is even number');
 	} else {
-		console.log(age, ': age is odd number');
+		console.log(age, ': Age is odd number');
 	}
 }

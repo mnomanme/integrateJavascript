@@ -10,14 +10,18 @@ function evenify(number) {
 	}
 }
 
+// only numbers
 nums = [10, 1, 2, 3, 4, 5, 6];
+
 for (let i = 0; i < nums.length; i++) {
-	const num = nums[i];
-	evenify(num);
+	const result = nums[i];
+	evenify(result); // call by function
 }
 
+// only friends ages
 friendAge = [32, 34, 57, 8, 4, 43];
+
 for (let i = 0; i < friendAge.length; i++) {
-	const age = friendAge[i];
-	evenify(age);
+	const result = friendAge[i];
+	evenify(result); // call by function
 }
