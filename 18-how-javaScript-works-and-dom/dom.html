@@ -23,8 +23,8 @@
 			</section>
 			<section>
 				<h2>Exploring DOM 2</h2>
-				<article>
-					<h3>artile-1</h3>
+				<article id="first-article">
+					<h3>article-1</h3>
 					<p title="I am the most important author" class="author">
 						author-1
 					</p>
@@ -37,7 +37,7 @@
 					</p>
 				</article>
 				<article class="special">
-					<h3>artile-2</h3>
+					<h3>article-2</h3>
 					<p class="author">author-2</p>
 					<p class="description">
 						Nulla expedita fugit eum atque! At recusandae quisquam
@@ -47,7 +47,7 @@
 					</p>
 				</article>
 				<article class="special">
-					<h3>artile-3</h3>
+					<h3>article-3</h3>
 					<p class="author">author-3</p>
 					<p class="description">
 						Tempore, maxime dolor aperiam et nemo nobis? Animi,
@@ -57,6 +57,16 @@
 						sapiente ipsam facere.
 					</p>
 				</article>
+				<article>
+					<h2>Grocery List</h2>
+					<ul id="gift-list">
+						<li>gift item - 1</li>
+						<li>gift item - 2</li>
+						<li>gift item - 3</li>
+						<li>gift item - 4</li>
+						<li>gift item - 5</li>
+					</ul>
+				</article>
 			</section>
 		</main>
 	</body>
@@ -65,6 +75,18 @@
 		// body
 		document.body.style.backgroundColor = 'lightgrey';
 		document.body.style.margin = 0;
+
+		// another gift item create
+		const ul = document.getElementById('gift-list');
+		const newUl = document.createElement('li');
+		newUl.innerHTML = 'biscuit';
+		ul.appendChild(newUl);
+
+		// create element
+		var article = document.getElementById('first-article');
+		var newArticle = document.createElement('h4');
+		newArticle.innerHTML = 'This is learning JavaScript';
+		article.appendChild(newArticle);
 
 		// set attribute
 		var setAttribute = document.querySelector('h2');
@@ -81,6 +103,7 @@
 			elements.style.backgroundColor = 'lightgrey';
 			elements.style.margin = '10px';
 		}
+
 		// special
 		var special = document.querySelectorAll('.special h3');
 		for (i = 0; i < special.length; i++) {
@@ -92,6 +115,7 @@
 			elements.style.marginLeft = '30px';
 			elements.style.padding = '20px';
 		}
+
 		// first
 		var first = document.getElementById('first');
 		first.style.color = 'green';
