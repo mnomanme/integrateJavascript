@@ -34,7 +34,7 @@
 						nemo!
 					</p>
 				</article>
-				<article>
+				<article class="special">
 					<h3>artile-2</h3>
 					<p class="author">author-2</p>
 					<p class="description">
@@ -44,7 +44,7 @@
 						deserunt aliquam fugiat quasi quos. Cupiditate.
 					</p>
 				</article>
-				<article>
+				<article class="special">
 					<h3>artile-3</h3>
 					<p class="author">author-3</p>
 					<p class="description">
@@ -60,6 +60,9 @@
 	</body>
 	<!-- script js -->
 	<script>
+		// body
+		document.body.style.backgroundColor = 'lightgrey';
+		// authors
 		var authors = document.getElementsByClassName('author');
 		// console.log(authors);
 		for (i = 0; i < authors.length; i++) {
@@ -69,6 +72,16 @@
 			elements.innerHTML = 'Lekhok - ' + (i + 1);
 			elements.style.backgroundColor = 'lightgrey';
 			elements.style.margin = '10px';
+		}
+		// special
+		var special = document.querySelectorAll('.special h3');
+		for (i = 0; i < special.length; i++) {
+			var elements = special[i];
+			// console.log(elements.innerHTML);
+			elements.innerHTML = 'special - ' + (i + 2);
+			elements.style.backgroundColor = 'tomato';
+			elements.style.marginLeft = '30px';
+			elements.style.padding = '20px';
 		}
 
 		var first = document.getElementById('first');
