@@ -25,7 +25,9 @@
 				<h2>Exploring DOM 2</h2>
 				<article>
 					<h3>artile-1</h3>
-					<p class="author">author-1</p>
+					<p title="I am the most important author" class="author">
+						author-1
+					</p>
 					<p class="description">
 						Lorem ipsum dolor, sit amet consectetur adipisicing
 						elit. Magnam recusandae qui, itaque, fugiat iste
@@ -63,6 +65,11 @@
 		// body
 		document.body.style.backgroundColor = 'lightgrey';
 		document.body.style.margin = 0;
+
+		// set attribute
+		var setAttribute = document.querySelector('h2');
+		setAttribute.setAttribute('title', 'Go explore DOM');
+
 		// authors
 		var authors = document.getElementsByClassName('author');
 		// console.log(authors);
@@ -80,11 +87,12 @@
 			var elements = special[i];
 			// console.log(elements.innerHTML);
 			elements.innerHTML = 'special - ' + (i + 2);
+			elements.setAttribute('title', 'You are special');
 			elements.style.backgroundColor = 'tomato';
 			elements.style.marginLeft = '30px';
 			elements.style.padding = '20px';
 		}
-
+		// first
 		var first = document.getElementById('first');
 		first.style.color = 'green';
 		first.style.backgroundColor = 'yellow';
