@@ -1,0 +1,13 @@
+// 17-3 Create Script tag and connect external Script file
+
+// 17-4 How Javascript Run and why script order is important
+
+// 17-5 What is DOM (Document Object Model)
+
+// 17-6 Capture Elements from HTML File using getElementById
+
+// 17-7 how to use getElementsByClassName and change innerHTML
+
+// 17-8 How to use querySelector and querySelectorAll
+
+// 17-9 node, node type, nodelist, htmlcollection, setAttribute
