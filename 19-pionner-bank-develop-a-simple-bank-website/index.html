@@ -21,7 +21,9 @@
 			<section>
 				<div id="login-area">
 					<h1 class="text-center">Welcome to Pioneer Bank</h1>
-					<div class="submit-area">
+					<div
+						class="submit-area shadow-lg p-5 mb-5 bg-white rounded"
+					>
 						<h4>Login</h4>
 						<br />
 						<input
@@ -46,6 +48,84 @@
 			<section>
 				<div id="transaction-area">
 					<h1>Transaction Area</h1>
+					<!-- first row -->
+					<div class="row">
+						<div class="col-md-4">
+							<div
+								class="
+									deposit
+									bg-warning
+									m-5
+									p-5
+									rounded
+									text-white
+								"
+							>
+								<h4>Deposit</h4>
+								<h2>$00</h2>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div
+								class="
+									withdraw
+									bg-danger
+									m-5
+									p-5
+									rounded
+									text-white
+								"
+							>
+								<h4>Withdraw</h4>
+								<h2>$00</h2>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div
+								class="
+									balance
+									bg-success
+									m-5
+									p-5
+									rounded
+									text-white
+								"
+							>
+								<h4>Balance</h4>
+								<h2>$1250</h2>
+							</div>
+						</div>
+					</div>
+					<!-- second row -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="shadow-lg p-5 mb-5 bg-white rounded">
+								<h4>Deposit</h4>
+								<input
+									type="text"
+									class="form-control"
+									placeholder="$ amout you want to deposit"
+								/>
+								<br />
+								<button class="btn btn-success">Deposit</button>
+							</div>
+						</div>
+						<br />
+						<div class="col-md-6">
+							<div class="shadow-lg p-5 mb-5 bg-white rounded">
+								<h4>Withdraw</h4>
+								<input
+									type="text"
+									class="form-control"
+									placeholder="$ amout you want to withdraw"
+								/>
+								<br />
+								<button class="btn btn-success">
+									Withdraw
+								</button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
