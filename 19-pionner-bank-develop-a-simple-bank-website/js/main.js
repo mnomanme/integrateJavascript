@@ -14,5 +14,13 @@ deposit.addEventListener('click', function () {
 	// console.log('deposit clicked');
 	const depositAmount = document.getElementById('depositAmount').value;
 	const depositNumber = parseFloat(depositAmount);
-	console.log(depositNumber);
+	// console.log(depositNumber);
+
+	const currentDeposit = document.getElementById('currentDeposit').innerText;
+	const currentDepositNumber = parseFloat(currentDeposit);
+
+	const totalDeposit = currentDepositNumber + depositNumber;
+
+	document.getElementById('currentDeposit').innerText = totalDeposit;
+	document.getElementById('depositAmount').value = '';
 });
