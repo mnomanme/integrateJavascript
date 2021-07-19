@@ -19,9 +19,8 @@ depositBtn.addEventListener('click', function () {
 	} else {
 		updateSpanText('currentDeposit', amountNumber);
 		updateSpanText('currentBalance', amountNumber);
-
-		document.getElementById('depositAmount').value = '';
 	}
+	document.getElementById('depositAmount').value = '';
 });
 
 // withdraw button event handler
@@ -35,9 +34,9 @@ withdrawBtn.addEventListener('click', function () {
 	} else {
 		updateSpanText('currentWithdraw', withdrawAmountNumber);
 		updateSpanText('currentBalance', -1 * withdrawAmountNumber);
-
-		document.getElementById('withdrawAmount').value = '';
 	}
+
+	document.getElementById('withdrawAmount').value = '';
 });
 
 // input amount number
