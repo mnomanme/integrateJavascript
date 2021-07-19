@@ -1,3 +1,5 @@
+// warning duplicate code is here
+
 // login button event handler
 const loginBtn = document.getElementById('login');
 loginBtn.addEventListener('click', function () {
@@ -11,8 +13,20 @@ loginBtn.addEventListener('click', function () {
 // deposit button event handler
 const depositBtn = document.getElementById('addDeposit');
 depositBtn.addEventListener('click', function () {
-	// console.log('deposit button works now');
 	const amountNumber = getInputNumber('depositAmount');
+	/*
+	const depositAmount = document.getElementById('depositAmount').value;
+	const amountNumber = parseFloat(depositAmount);
+	const currentDeposit = document.getElementById('currentDeposit').innerText;
+	const currentDepositNumber = parseFloat(currentDeposit);
+	const totalDeposit = currentDepositNumber + depositNumber;
+	document.getElementById('currentDeposit').innerText = totalDeposit;
+
+	const currentBalance = document.getElementById('currentBalance').innerText;
+	const currentBalanceNumber = parseFloat(currentBalance);
+	const totalBalance = depositNumber + currentBalanceNumber;
+	document.getElementById('currentBalance').innerText = totalBalance;
+	**/
 
 	if (amountNumber < 0) {
 		alert('Please Enter Valid Amount!');
@@ -27,9 +41,9 @@ depositBtn.addEventListener('click', function () {
 // withdraw button event handler
 const withdrawBtn = document.getElementById('addWithdraw');
 withdrawBtn.addEventListener('click', function () {
-	// console.log('withdraw button works now');
 	const withdrawAmountNumber = getInputNumber('withdrawAmount');
-
+	// const withdrawAmount = document.getElementById('withdrawAmount').value;
+	// const withdrawAmountNumber = parseFloat(withdrawAmount);
 	if (withdrawAmountNumber < 0) {
 		alert('Pleaser Enter Valid Withdraw Amount!');
 	} else {
@@ -40,14 +54,13 @@ withdrawBtn.addEventListener('click', function () {
 	}
 });
 
-// input amount number
 function getInputNumber(id) {
 	const inputAmount = document.getElementById(id).value;
 	const inputAmountNumber = parseFloat(inputAmount);
 
 	return inputAmountNumber;
 }
-// update amount number
+
 function updateSpanText(id, amountNumber) {
 	const currentAmount = document.getElementById(id).innerText;
 	const currentAmountNumber = parseFloat(currentAmount);
