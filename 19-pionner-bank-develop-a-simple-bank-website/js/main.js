@@ -28,7 +28,7 @@ const withdrawBtn = document.getElementById('addWithdraw');
 withdrawBtn.addEventListener('click', function () {
 	// console.log('withdraw button works now');
 	const withdrawAmountNumber = getInputNumber('withdrawAmount');
-
+	// alert(withdrawAmountNumber);
 	if (withdrawAmountNumber < 0) {
 		alert('Pleaser Enter Valid Withdraw Amount!');
 	} else {
