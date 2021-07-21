@@ -1,10 +1,8 @@
 // li first item
-document
-	.getElementById('first-item')
-	.addEventListener('click', function (event) {
-		// console.log('first item clicked');
-		event.stopPropagation();
-	});
+document.getElementById('first-item').addEventListener('click', function (event) {
+	// console.log('first item clicked');
+	event.stopPropagation();
+});
 
 // ul my list
 document.getElementById('my-list').addEventListener('click', function (event) {
@@ -13,11 +11,9 @@ document.getElementById('my-list').addEventListener('click', function (event) {
 });
 
 // container
-document
-	.getElementById('container')
-	.addEventListener('click', function (event) {
-		// console.log('container clicked');
-	});
+document.getElementById('container').addEventListener('click', function (event) {
+	// console.log('container clicked');
+});
 
 // button
 var item = document.getElementsByClassName('item');
