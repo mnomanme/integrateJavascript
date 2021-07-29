@@ -1,3 +1,48 @@
+// fourth solution
+// product calculate
+function handleProductChange(product, productAdd) {
+	const productInput = document.getElementById(product + '-count');
+	const productCount = parseInt(productInput.value);
+
+	let productNewCount = productCount;
+	if (productAdd === true) {
+		productNewCount = productCount + 1;
+	}
+	if (productAdd === false && productNewCount > 0) {
+		productNewCount = productCount - 1;
+	}
+	productInput.value = productNewCount;
+
+	let productTotal = 0;
+	if (product === 'phone') {
+		productTotal = productNewCount * 1200;
+	}
+	if (product === 'case') {
+		productTotal = productNewCount * 60;
+	}
+	document.getElementById(product + '-price').innerText = productTotal;
+	// subtotal
+	calculateTotal();
+}
+
+// calculate subtotal
+function calculateTotal() {
+	const phoneInput = document.getElementById('phone-count');
+	const phoneCount = parseInt(phoneInput.value);
+
+	const caseInput = document.getElementById('case-count');
+	const caseCount = parseInt(caseInput.value);
+
+	const subtotal = phoneCount * 1200 + caseCount * 60;
+	document.getElementById('sub-total').innerText = subtotal;
+
+	const tax = subtotal / 10;
+	document.getElementById('tax').innerText = tax;
+
+	const total = subtotal + tax;
+	document.getElementById('total').innerText = total;
+}
+
 // third solution
 // case increase & decrease
 function handleCaseChange(isIncrease) {
