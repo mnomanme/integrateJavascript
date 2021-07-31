@@ -44,6 +44,7 @@ a.active {
 	grid-template-columns: 2fr 3fr;
 	gap: 70px;
 	align-items: center;
+	padding-bottom: 100px;
 }
 .booking-content {
 	color: #fff;
@@ -119,6 +120,7 @@ a.active {
 	color: #fff;
 	font-weight: 500;
 	background-color: #e33741;
+	cursor: pointer;
 }
 .amount {
 	display: flex;
