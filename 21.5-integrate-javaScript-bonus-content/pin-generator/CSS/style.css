@@ -38,19 +38,24 @@ body {
 }
 
 input[type='text'] {
+	font-size: 20px;
 	background-color: #3d4153;
+	color: whitesmoke;
 	padding: 10px 0px;
 	width: 80%;
 	margin: 0 auto;
 	border: 2px solid #858299;
 	height: 50px;
 	padding: 10px;
+	text-align: center;
+	text-decoration: tomato;
 }
 
 input[type='text']:focus {
 	background-color: #3d4153;
 	color: #fff;
 	font-size: 20px;
+	text-align: center;
 }
 
 .numbers {
