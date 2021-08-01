@@ -34,12 +34,12 @@
 			<div class="booking-form">
 				<h3>Book Ocean Time</h3>
 				<div class="input-group">
-					<label for="">Flying From</label>
-					<input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh" />
+					<label for="">Shipping From</label>
+					<input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh" />
 				</div>
 				<div class="input-group">
-					<label for="">Flying To</label>
-					<input class="inp-style" type="text" name="" placeholder="New York, United States" />
+					<label for="">Shipping To</label>
+					<input class="inp-style" type="text" name="" placeholder="Mecca, Saudi Arabia" />
 				</div>
 				<div class="inputs">
 					<div class="input-group">
@@ -68,10 +68,13 @@
 				<div class="input-group f-class">
 					<div>
 						<label for="">Economy ($100)</label>
-						<input id="economy-count" class="inp-style inp-width" type="number" name="" value="0" />
+						<input id="economyCount" class="inp-style inp-width" type="number" name="" value="0" />
 					</div>
 					<div class="plus-minus-btn">
-						<p><span id="economy-increament">+</span> <span id="economy-decreament">-</span></p>
+						<p>
+							<span onclick="handleEconomyTicket(true)" id="economyIncreament">+</span>
+							<span onclick="handleEconomyTicket(false)" id="economyDecreament">-</span>
+						</p>
 					</div>
 				</div>
 				<div class="calculations">
