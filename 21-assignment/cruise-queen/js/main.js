@@ -12,13 +12,6 @@ function handleFirstClassTicket(addFirstTicket) {
 	}
 	firstClassTicket.value = firstClassNewTicket;
 	// calculate first class ticket price
-	// const firstClassTicketPrice = firstClassNewTicket * 150;
-	// const firstClassTicketVat = firstClassTicketPrice / 10;
-	// const firstClassTicketTotal = firstClassTicketPrice + firstClassTicketVat;
-
-	// document.getElementById('subTotal').innerText = firstClassTicketPrice;
-	// document.getElementById('vatCharge').innerText = firstClassTicketVat;
-	// document.getElementById('total').innerText = firstClassTicketTotal;
 	ticketTotal();
 }
 
@@ -35,13 +28,22 @@ function handleEconomyTicket(addEconomyTicket) {
 		economyNewTicket = economyTicketCount - 1;
 	}
 	economyTicket.value = economyNewTicket;
-	// calculate economy ticket price
-	// const economyTicketPrice = economyNewTicket * 100;
-	// const economyTicketVat = economyTicketPrice / 10;
-	// const economyTicketTotal = economyTicketPrice + economyTicketVat;
-
-	// document.getElementById('subTotal').innerText = economyTicketPrice;
-	// document.getElementById('vatCharge').innerText = economyTicketVat;
-	// document.getElementById('total').innerText = economyTicketTotal;
+	// calculate economy class ticket price
 	ticketTotal();
+}
+
+function ticketTotal() {
+	const firstClassTicket = document.getElementById('firstClassCount');
+	const firstClassTicketCount = parseInt(firstClassTicket.value);
+
+	const economyTicket = document.getElementById('economyCount');
+	const economyTicketCount = parseInt(economyTicket.value);
+
+	const subTotal = firstClassTicketCount * 150 + economyTicketCount * 100;
+	const vat = subTotal / 10;
+	const total = subTotal + vat;
+
+	document.getElementById('subTotal').innerText = subTotal;
+	document.getElementById('vatCharge').innerText = vat;
+	document.getElementById('total').innerText = total;
 }
