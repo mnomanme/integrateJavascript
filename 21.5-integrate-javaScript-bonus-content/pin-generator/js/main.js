@@ -53,6 +53,8 @@ const submitVerify = document.getElementById('submit').addEventListener('click',
 	} else {
 		matchingResult('none', 'block');
 	}
+	document.getElementById('pinInput').value = '';
+	document.getElementById('digitShow').value = '';
 });
 
 // matching result
