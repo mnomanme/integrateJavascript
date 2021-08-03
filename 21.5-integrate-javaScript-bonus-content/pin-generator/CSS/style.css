@@ -48,7 +48,7 @@ input[type='text'] {
 	height: 50px;
 	padding: 10px;
 	text-align: center;
-	text-decoration: tomato;
+	letter-spacing: 5px;
 }
 
 input[type='text']:focus {
@@ -115,7 +115,6 @@ input[type='text']:focus {
 	width: 35%;
 	margin: 0 auto;
 	padding-bottom: 20px;
-	display: none;
 }
 
 .action-left {
