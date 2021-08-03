@@ -1,7 +1,3 @@
-// success & danger sign
-document.getElementById('successSign').style.display = 'none';
-document.getElementById('dangerSign').style.display = 'none';
-
 // generate random pin number
 function handleRandomPin() {
 	const randomPin = Math.random() * 10000;
@@ -22,7 +18,6 @@ function generatePin() {
 
 // submit field input digit button
 const buttonInput = document.getElementById('buttonDigit').addEventListener('click', function (event) {
-	// console.log(event.target.innerText);
 	const btnNumber = event.target.innerText;
 
 	if (isNaN(btnNumber)) {
@@ -32,11 +27,10 @@ const buttonInput = document.getElementById('buttonDigit').addEventListener('cli
 			typeInput.value = '';
 		}
 		// handle backspace
-		// if (btnNumber === 'B') {
-		// 	const typeInput = document.getElementById('digitShow');
-		// 	typeInput.value = btnNumber - typeInput.value;
-		// }
-		console.log('not a number');
+		if (btnNumber === 'B') {
+			const typeInput = document.getElementById('digitShow');
+			typeInput.value = typeInput.value.slice(0, -1);
+		}
 	} else {
 		const typeInput = document.getElementById('digitShow');
 		typeInput.value = typeInput.value + btnNumber;
@@ -48,13 +42,20 @@ const submitVerify = document.getElementById('submit').addEventListener('click',
 	const generatePin = document.getElementById('pinInput').value;
 	const typePin = document.getElementById('digitShow').value;
 
+	if (generatePin === '') {
+		alert('Please Generate Your Pin First!');
+	}
+	if (generatePin != '' && typePin === '') {
+		alert('Please Type Your 4 Digit Code');
+	}
 	if (generatePin === typePin) {
 		matchingResult('block', 'none');
+		document.getElementById('pinInput').value = '';
+		document.getElementById('digitShow').value = '';
 	} else {
 		matchingResult('none', 'block');
+		document.getElementById('digitShow').value = '';
 	}
-	document.getElementById('pinInput').value = '';
-	document.getElementById('digitShow').value = '';
 });
 
 // matching result
@@ -64,3 +65,5 @@ function matchingResult(correctSign, incorrectSign) {
 	const incorrect = document.getElementById('dangerSign');
 	incorrect.style.display = incorrectSign;
 }
+
+// submit try left
