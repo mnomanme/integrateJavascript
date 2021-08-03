@@ -22,7 +22,7 @@
 				</div>
 				<div class="col-md-6">
 					<div class="input-section half-width">
-						<input id="digitShow" class="form-control" type="text" placeholder="Your 4 Digit Pin" />
+						<input id="digitShow" class="form-control" type="text" placeholder="Your 4 Digit Code" />
 						<div class="numbers">
 							<div id="buttonDigit" class="calc-body">
 								<div class="calc-button-row">
@@ -41,13 +41,13 @@
 									<div class="button">3</div>
 								</div>
 								<div class="calc-button-row">
-									<div class="button">=></div>
+									<div class="button">B</div>
 									<div class="button">0</div>
 									<div class="button">C</div>
 								</div>
 								<div>
-									<button onclick="alert('please type your 4 digit pin')" id="submit" type="submit" class="submit-btn">Submit</button>
-									<p class="action-left">3 try left</p>
+									<button id="submit" type="submit" class="submit-btn">Submit</button>
+									<p class="action-left"><span id="tryLeft">3</span> try left</p>
 								</div>
 							</div>
 						</div>
