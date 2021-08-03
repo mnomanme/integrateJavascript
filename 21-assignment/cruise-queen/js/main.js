@@ -31,7 +31,7 @@ function handleEconomyTicket(addEconomyTicket) {
 	// calculate economy class ticket price
 	ticketTotal();
 }
-
+// ticket total price
 function ticketTotal() {
 	const firstClassTicket = document.getElementById('firstClassCount');
 	const firstClassTicketCount = parseInt(firstClassTicket.value);
