@@ -103,8 +103,22 @@ a.active {
 	font-size: 30px;
 	padding: 2px;
 	margin: 10px 5px 0px 0px;
-	word-spacing: 20px;
+	word-spacing: 10px;
 	cursor: pointer;
+}
+.sign-button {
+	border: none;
+	width: 25px;
+	height: 35px;
+	margin-top: 17px;
+	margin-left: 2px;
+	background-color: #e33741;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+}
+.sign-button:hover {
+	background-color: crimson;
 }
 .booking-form .inputs {
 	display: grid;
@@ -126,8 +140,32 @@ a.active {
 	display: flex;
 	justify-content: space-between;
 }
-.minus {
-	padding: 0.1px;
-	background-color: goldenrod;
-	cursor: pointer;
+#confirmation-area {
+	display: none;
+	background-color: rgba(33, 52, 59, 0.568);
+	color: white;
+	border: 1px solid #ddd;
+	padding: 10px;
+	padding-top: 50px;
+	border-radius: 5px;
+	width: 40%;
+	height: 22em;
+	margin-left: 180px;
+	float: right;
+	text-align: center;
+	position: relative;
+	bottom: 175px;
+	right: 75px;
+}
+#confirmation-area h1 {
+	font-size: 40px;
+}
+#confirmation-area h2 {
+	font-size: 25px;
+}
+#total,
+#first-ticket,
+#economy-ticket {
+	font-size: x-large;
+	/* color: sandybrown; */
 }
