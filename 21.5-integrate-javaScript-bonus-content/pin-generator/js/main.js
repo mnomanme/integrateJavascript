@@ -1,9 +1,13 @@
+// success & danger sign
+document.getElementById('successSign').style.display = 'none';
+document.getElementById('dangerSign').style.display = 'none';
+
 // generate random pin number
 function handleRandomPin() {
-	const randomPin = Math.random() * 10000;
+	const randomPin = Math.random() * 1000000;
 	const pinCount = (randomPin + '').split('.')[0];
 
-	if (pinCount.length === 4) {
+	if (pinCount.length === 6) {
 		return pinCount;
 	} else {
 		return handleRandomPin();
@@ -45,16 +49,18 @@ const submitVerify = document.getElementById('submit').addEventListener('click',
 	if (generatePin === '') {
 		alert('Please Generate Your Pin First!');
 	}
-	if (generatePin != '' && typePin === '') {
+	if (generatePin !== '' && typePin === '') {
 		alert('Please Type Your 4 Digit Code');
 	}
-	if (generatePin === typePin) {
+
+	if (generatePin === typePin && generatePin !== '' && typePin !== '') {
 		matchingResult('block', 'none');
 		document.getElementById('pinInput').value = '';
 		document.getElementById('digitShow').value = '';
 	} else {
 		matchingResult('none', 'block');
 		document.getElementById('digitShow').value = '';
+		alert('Youn Cannot Submit Empty Box!');
 	}
 });
 
@@ -64,6 +70,18 @@ function matchingResult(correctSign, incorrectSign) {
 	success.style.display = correctSign;
 	const incorrect = document.getElementById('dangerSign');
 	incorrect.style.display = incorrectSign;
+
+	tryLeft();
 }
 
 // submit try left
+function tryLeft() {
+	const tryLeftInput = parseInt(document.getElementById('tryLeft').innerText);
+	const tryLeftCount = (document.getElementById('tryLeft').innerText = tryLeftInput - 1);
+	console.log('ss', typeof tryLeftCount);
+	if (tryLeftCount <= 0) {
+		document.getElementById('tryLeft').innerText = 0;
+		document.getElementById('submit').style.display = 'none';
+		document.getElementById('pinInput').value = '';
+	}
+}
